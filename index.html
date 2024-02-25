@@ -2,12 +2,16 @@
 </head>
 <body>
 <script>
-    const invocation = new XMLHttpRequest();
-    const url = "https://github.com/zhid889773/zhid889773.github.io/blob/main/index.html";
-function handle(){
-    print('get')
-}
-    function callOtherDomain() {
+
+    function handle(){
+        print('get')
+    }
+    function wget(url) {
+        const invocation = new XMLHttpRequest();
+        // const url = "https://developer.mozilla.org/api/v1/whoami";
+        callOtherDomain(url)
+    }
+    function callOtherDomain(url) {
         if (invocation) {
             invocation.open("GET", url, true);
             invocation.withCredentials = true;
@@ -16,7 +20,7 @@ function handle(){
             invocation.send();
         }
     }
-    callOtherDomain()
+    wget('https://developer.mozilla.org/api/v1/whoami')
 </script>
 <p>常用地址：
 <li><a href="https://bwh81.net/clientarea.php?action=products">(搬瓦工)bwg</a></li>
