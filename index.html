@@ -9,9 +9,9 @@
     function wget(url) {
         const invocation = new XMLHttpRequest();
         // const url = "https://developer.mozilla.org/api/v1/whoami";
-        callOtherDomain(url)
+        callOtherDomain(invocation,url)
     }
-    function callOtherDomain(url) {
+    function callOtherDomain(invocation,url) {
         if (invocation) {
             invocation.open("GET", url, true);
             invocation.withCredentials = true;
