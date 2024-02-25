@@ -2,9 +2,19 @@
 </head>
 <body>
 <script>
-    fetch('https://github.com/zhid889773/zhid889773.github.io/blob/main/index.html').then(function (resp) {
-        print(resp.status)
-    })
+    const invocation = new XMLHttpRequest();
+    const url = "https://github.com/zhid889773/zhid889773.github.io/blob/main/index.html";
+
+    function callOtherDomain() {
+        if (invocation) {
+            invocation.open("GET", url, true);
+            invocation.withCredentials = true;
+            invocation.onreadystatechange = null;
+            invocation.send();
+        }
+    }
+    callOtherDomain()
+
 </script>
 <p>常用地址：
 <li><a href="https://bwh81.net/clientarea.php?action=products">(搬瓦工)bwg</a></li>
