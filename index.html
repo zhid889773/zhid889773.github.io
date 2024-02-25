@@ -4,17 +4,19 @@
 <script>
     const invocation = new XMLHttpRequest();
     const url = "https://github.com/zhid889773/zhid889773.github.io/blob/main/index.html";
-
+function handle(){
+    print('get')
+}
     function callOtherDomain() {
         if (invocation) {
             invocation.open("GET", url, true);
             invocation.withCredentials = true;
-            invocation.onreadystatechange = null;
+            invocation.onreadystatechange = handle();
+            invocation.
             invocation.send();
         }
     }
     callOtherDomain()
-
 </script>
 <p>常用地址：
 <li><a href="https://bwh81.net/clientarea.php?action=products">(搬瓦工)bwg</a></li>
